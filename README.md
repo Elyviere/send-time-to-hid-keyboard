@@ -27,7 +27,7 @@ And finally, once those values are set correctly, it's time to start up the prog
 cd send-time-to-hid-keyboard
 cargo run
 ```
-Note that the program will not be able to find your device until you complete the setup for the keyboard as well (see below).
+Note that the program will not be able to find your device until you complete the setup for the keyboard as well (see [Receiving side](#receiving-side-keyboard)).
 
 ## Receiving side (keyboard)
 If using QMK on the keyboard, the time can be simply shown on an OLED with the following code in your `keymap.c`:
@@ -42,10 +42,18 @@ You'll also need to add the following in your `rules.mk`
 ```
 RAW_ENABLE = yes
 ```
+
+For other software, please refer to your manufacturer.
+
 ### Text location and Split-keyboards
-Note that this code will print the time at the top of the main-side keyboard if using split keyboards. For hints on printing the time on the other side of the keyboard, please see the method `raw_hid_receive` in my personal repository: [qmk-firmware-elyviere - Luna.c](https://github.com/Elyviere/qmk_firmware_elyviere/blob/main/keyboards/sofle/keymaps/elyviere/luna.c)
+Note that this code will print the time at the top of the main-side keyboard if using split keyboards. 
+
+- For hints on printing the time on the other half of the keyboard, please see the method `raw_hid_receive` in my personal repository: [qmk-firmware-elyviere - Luna.c](https://github.com/Elyviere/qmk_firmware_elyviere/blob/main/keyboards/sofle/keymaps/elyviere/luna.c). 
+- To move the location of the time, use the `oled_set_cursor(uint8_t col, uint8_t line)` method or equivalent (further info in the [Further Reading](#further-reading) section below).
 
 ## Further reading
 Please see the relevant QMK help pages for further information:
-[RAW-Hid](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rawhid.md).
+
+[RAW-Hid](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rawhid.md)
+
 [OLED Driver](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_oled_driver.md)
