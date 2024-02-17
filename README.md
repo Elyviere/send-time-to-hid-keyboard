@@ -29,6 +29,8 @@ cargo run
 ```
 Note that the program will not be able to find your device until you complete the setup for the keyboard as well (see [Receiving side](#receiving-side-keyboard)).
 
+WSL Note: If using WSL in Windows, unfortunately the device won't be picked up by the WSL distro. Instead, you'll need to run the program in Powershell.
+
 ## Receiving side (keyboard)
 If using QMK on the keyboard, the time can be simply shown on an OLED with the following code in your `keymap.c`:
 ```
