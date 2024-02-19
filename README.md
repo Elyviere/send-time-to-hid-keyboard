@@ -2,6 +2,8 @@
 
 A program to send the current time to a connected keyboard via [hidapi](https://docs.rs/hidapi/latest/hidapi/). The time is sent to the keyboard in the format "12:34". The time is sent fully formatted rather than as numbers because the memory may be limited on the keyboard. This solution therefore minimises keyboard-side code and thereby saves space.
 
+This program should work with essentially any HID-device, but was designed with QMK keyboards in mind. Setting it to use with any QMK keyboard should require only minimal configuration.
+
 ![A Sofle keyboard receiving the current time from the PC](https://github.com/Elyviere/send-time-to-hid-keyboard/assets/23457506/eb770a1f-f3b7-4318-a23d-0f0966f0e319)
 
 ## Running the program
