@@ -59,3 +59,6 @@ Please see the relevant QMK help pages for further information:
 [RAW-Hid](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_rawhid.md)
 
 [OLED Driver](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_oled_driver.md)
+
+## Attributions
+Icon  designed by [Freepik](https://www.freepik.com/) from Flaticon
