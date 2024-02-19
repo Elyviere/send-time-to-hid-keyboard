@@ -31,7 +31,7 @@ Note that the program will not be able to find your device until you complete th
 
 WSL Note: If using WSL in Windows, unfortunately the HID device won't be picked up by the WSL distro. Instead, you'll need to run the program in Powershell.
 
-## Separate executable
+### Separate executable
 
 If you want a stand-alone executable, in order to make the program start when your PC powers up, run the following command:
 `cargo build --release`
