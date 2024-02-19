@@ -2,7 +2,7 @@
 
 A program to send the current time to a connected keyboard via [hidapi](https://docs.rs/hidapi/latest/hidapi/). The time is sent to the keyboard in the format "12:34". The time is sent fully formatted rather than as numbers because the memory may be limited on the keyboard. This solution therefore minimises keyboard-side code and thereby saves space.
 
-![A Sofle keyboard receiving the current time from the PC](https://github.com/Elyviere/send-time-to-hid-keyboard/assets/23457506/b9f2ddcc-695f-4ce7-9623-b53e9eebad78)
+![A Sofle keyboard receiving the current time from the PC](https://github.com/Elyviere/send-time-to-hid-keyboard/assets/23457506/eb770a1f-f3b7-4318-a23d-0f0966f0e319)
 
 ## Running the program
 No readily-compiled version of the program is currently provided, as configuration is likely necessary inside the code in order to identify your keyboard. Instead, the user is required to [install rust](https://www.rust-lang.org/tools/install), and compile the code themselves. Installing rust should provide access to the `cargo` command, which will be used to compile and run the program.
