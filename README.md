@@ -29,7 +29,15 @@ cargo run
 ```
 Note that the program will not be able to find your device until you complete the setup for the keyboard as well (see [Receiving side](#receiving-side-keyboard)).
 
-WSL Note: If using WSL in Windows, unfortunately the device won't be picked up by the WSL distro. Instead, you'll need to run the program in Powershell.
+WSL Note: If using WSL in Windows, unfortunately the HID device won't be picked up by the WSL distro. Instead, you'll need to run the program in Powershell.
+
+## Separate executable
+
+If you want a stand-alone executable, in order to make the program start when your PC powers up, run the following command:
+`cargo build --release`
+This will create an executable in `/target/release/send-time-to-hid-keyboard`, with a matching extension. In Windows, this would be `send-time-to-hid-keyboard.exe`. When running the program however, you won't get any visual cue that the program has started. Instead, use a terminal or the task manager if you want confirmation that the process is running. It is aptly named "Send-time-to-hid-keyboard".
+
+Now you can add this to your PC's startup executables, following any guide for your specific OS to do so.
 
 ## Receiving side (keyboard)
 If using QMK on the keyboard, the time can be simply shown on an OLED with the following code in your `keymap.c`:
