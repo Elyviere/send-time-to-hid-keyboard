@@ -7,7 +7,11 @@ This program should work with essentially any HID-device, but was designed with 
 ![A Sofle keyboard receiving the current time from the PC](https://github.com/Elyviere/send-time-to-hid-keyboard/assets/23457506/eb770a1f-f3b7-4318-a23d-0f0966f0e319)
 
 ## Running the program
-No readily-compiled version of the program is currently provided, as configuration is likely necessary inside the code in order to identify your keyboard. Instead, the user is required to [install rust](https://www.rust-lang.org/tools/install), and compile the code themselves. Installing rust should provide access to the `cargo` command, which will be used to compile and run the program.
+No readily-compiled version of the program is currently provided, as configuration is likely necessary inside the code in order to identify your keyboard. Instead, the user is required to [install rust](https://www.rust-lang.org/tools/install), and compile the code themselves. Installing rust should provide access to the `cargo` command, which will be used to compile and run the program. Also, you'll need to install libudev to your system. Alternatively, you can run the below commands if these packages are available in your distribution:
+```
+sudo apt update
+sudo apt install rustc cargo pkg-config libudev-dev
+```
 
 Next, clone the git repository using a terminal or powershell, in a folder of your choice.
 ```
